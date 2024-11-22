@@ -1,0 +1,24 @@
+# Package metadata section
+[package]
+# Name of the package/application
+name = "learn"
+# Current version number
+version = "0.1.0"
+# Rust edition to use (2021 is the latest stable edition)
+edition = "2021"
+# Specify the build script file (build.rs)
+build = "build.rs"
+
+# Runtime dependencies section
+[dependencies]
+# Slint UI framework
+# - version 1.3: Use version 1.3.x of Slint
+# - backend-winit: Enable the winit backend for native window management
+slint = { version = "1.3", features = ["backend-winit"] }
+# Image processing library (used by Slint for loading images and icons)
+image = "0.24"
+
+# Build-time dependencies section (used by build.rs)
+[build-dependencies]
+# Library for embedding resources (like icons) into Windows executables
+embed-resource = "2.4"
